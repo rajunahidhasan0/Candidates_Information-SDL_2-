@@ -1,10 +1,10 @@
 FORMAT: 1A
-HOST: https://candidates-information.herokuapp.com/pets
+HOST: https://candidates-information.herokuapp.com/
 
 # Candidates Info.
 It's a simple API allowing consumers to view information of candidates.
 
-##Candidates Information [/pets]
+##Candidates Information [/pets/]
 
 ### List All Candidates[GET]
 
@@ -73,3 +73,32 @@ Thanks for using our app.
         }
         ]
         }
+        
+## User Modification [/questions/{id}]
+
++ Parameters
+    + id (number) - ID of the User in the form of an integer
+
+### Delete single user data [DELETE/{id}]
+
++ Response 204
+
+### Update user data [PUT/{id}]
++ Parameters
+    + id (number) - ID of the User in the form of an integer
+
++ Request (application/json)
+
+        {
+            {
+                "_id": "5cbd8cb1e4041330e8898c27",
+                "name": "shuruj",
+                "regestration": "1810776125",
+                "college": "Rajshai college",
+                "session": "2017-18"
+            }
+        }
+
++ Response 201 (application/json)
+    + Headers
+    + Body
